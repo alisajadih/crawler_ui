@@ -130,7 +130,7 @@ const CrawlLinks = () => {
 
   return (
     <Grid container className={classes.container}>
-      <Grid item xs={3} style={{ borderRight: "1px solid #D1D5DB" }}>
+      <Grid item xs={3} style={{ borderRight: "1px solid #D1D5DB", height:'100vh', overflow:'auto' }}>
         <TreeView
           className={classes.tree}
           defaultExpanded={["1"]}
@@ -139,20 +139,6 @@ const CrawlLinks = () => {
           defaultEndIcon={<CloseSquare />}
         >
           {!!crawlData.data.length && renderTree(crawlData.data, handleClick)}
-          {/* <StyledTreeItem nodeId="1" label="Main">
-            <StyledTreeItem nodeId="2" label="Hello" />
-            <StyledTreeItem nodeId="3" label="Subtree with children">
-              <StyledTreeItem nodeId="6" label="Hello" />
-              <StyledTreeItem nodeId="7" label="Sub-subtree with children">
-                <StyledTreeItem nodeId="9" label="Child 1" />
-                <StyledTreeItem nodeId="10" label="Child 2" />
-                <StyledTreeItem nodeId="11" label="Child 3" />
-              </StyledTreeItem>
-              <StyledTreeItem nodeId="8" label="Hello" />
-            </StyledTreeItem>
-            <StyledTreeItem nodeId="4" label="World" />
-            <StyledTreeItem nodeId="5" label="Something something" />
-          </StyledTreeItem> */}
         </TreeView>
       </Grid>
       <Grid item xs={9}>

@@ -21,11 +21,16 @@ function PaperComponent(props) {
     </Draggable>
   );
 }
+
 const SuccessModal = ({ open, onClose: handleClose, crawlId }) => {
   const handleCopyToClipboard = () => {
     console.log("here");
   };
   const value = `http://localhost:3000/crawl_links/${crawlId}`;
+  const handleAddToTab = () => {
+    window.open(value, "_blank");
+  };
+
   return (
     <Dialog
       open={open}
@@ -59,6 +64,9 @@ const SuccessModal = ({ open, onClose: handleClose, crawlId }) => {
       <DialogActions>
         <Button onClick={handleClose} color="primary">
           close
+        </Button>
+        <Button onClick={handleAddToTab} color="primary">
+          Open Link
         </Button>
       </DialogActions>
     </Dialog>
