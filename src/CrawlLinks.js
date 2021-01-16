@@ -130,7 +130,15 @@ const CrawlLinks = () => {
 
   return (
     <Grid container className={classes.container}>
-      <Grid item xs={3} style={{ borderRight: "1px solid #D1D5DB", height:'100vh', overflow:'auto' }}>
+      <Grid
+        item
+        xs={3}
+        style={{
+          borderRight: "1px solid #D1D5DB",
+          height: "100vh",
+          overflow: "auto",
+        }}
+      >
         <TreeView
           className={classes.tree}
           defaultExpanded={["1"]}
@@ -158,7 +166,3 @@ const CrawlLinks = () => {
 };
 
 export default CrawlLinks;
-
-
-
-
